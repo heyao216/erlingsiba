@@ -36,6 +36,7 @@ function MainScene:start()
 end
 
 function MainScene:onRight()
+    unclockTile()
     for i = 3 , 1 , -1 do
         for j = 0 , 3 do
             local index = j * 4 + i
@@ -45,6 +46,7 @@ function MainScene:onRight()
 end
 
 function MainScene:onLeft()
+    unclockTile()
     for i = 2 , 4 do
         for j = 0 , 3 do
             local index = j * 4 + i
@@ -54,6 +56,7 @@ function MainScene:onLeft()
 end
 
 function MainScene:onUp()
+    unclockTile()
     for i = 2 , 4 do
         for j = 1 , 4 do
            local index = (i - 1) * 4 + j
@@ -63,6 +66,7 @@ function MainScene:onUp()
 end
 
 function MainScene:onDown()
+    unclockTile()
     for i = 3 , 1 , -1 do
         for j = 1 , 4 do
             local index = (i - 1) * 4 + j
@@ -94,17 +98,31 @@ function moveTile(tileIndex , direction)
         t[nextIndex] = tile
         local row , colum = getRowAndColumByIndex(nextIndex)
         local p1 = getTilePosByIndex(nextIndex)
-        --transition.moveTo(tile, {x = p1.x , y = p1.y , time = 0.1})
-        tile:setPosition(p1)
+        transition.stopTarget(tile)
+        transition.moveTo(tile, {x = p1.x , y = p1.y , time = 0.1})
         if canMoveToNext(nextIndex , direction, row , colum) then 
             moveTile(nextIndex, direction) --可以继续移动
         end
         --下一个格子有并且数字一样
-    elseif nextTile.data == tile.data then
+    elseif nextTile.data == tile.data and not nextTile.locked  then
         print("合体:"..tileIndex.."->"..nextIndex)
         t[tileIndex] = nil
-        tile:removeFromParentAndCleanup(true)
-        nextTile:setData(nextTile.data * 2)
+        transition.stopTarget(tile)
+        transition.moveTo(tile, {x = nextTile.x , y = nextTile.y , time = 0.1 , onComplete = function ()
+         tile:removeFromParentAndCleanup(true)
+         nextTile:setData(nextTile.data * 2)
+         end})
+        nextTile.locked = true
+    end
+end
+
+--解锁被锁定的方块
+function unclockTile()
+    for i = 1 ,16 do
+        tile = t[i]
+        if tile ~= nil then
+            tile.locked = false
+        end
     end
 end
 

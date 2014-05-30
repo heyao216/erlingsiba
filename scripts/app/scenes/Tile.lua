@@ -4,6 +4,7 @@ local Tile = class("Tile", function ()
 end)
 
 function Tile:ctor()
+	self.locked = false  --单词操作只能合体一次
 	self.data = 2
 	self.rect = display.newRect(100, 100)
 	self.rect:setPosition(ccp(50, 50))
@@ -24,7 +25,12 @@ function Tile:redraw()
 	local color = hexToColor(colors[math.log(self.data , 2)])
 	self.lable:setString(self.data)
 	self.rect:setLineColor(ccc4FFromccc4B(color))
-	self.rect:setScale(0.5)
+	self.rect:setScale(0.6)
+	if self.data == 2048 then
+		self.lable:setFontSize(40)
+	else
+		self.lable:setFontSize(50)
+	end
 	transition.scaleTo(self.rect, {scale = 1 , time = 0.2 , easing = "bounceOut"})
 end
 
