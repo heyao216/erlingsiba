@@ -1,0 +1,119 @@
+Cocos2d: 
+<dict>
+	cocos2d.x.version: 2.2.1
+	cocos2d.x.compiled_with_profiler: false
+	cocos2d.x.compiled_with_gl_state_cache: true
+	gl.vendor: Intel Inc.
+	gl.renderer: Intel Iris OpenGL Engine
+	gl.version: 2.1 INTEL-8.24.12
+	gl.max_texture_size: 16384
+	gl.max_texture_units: 16
+	gl.supports_PVRTC: false
+	gl.supports_NPOT: true
+	gl.supports_BGRA8888: false
+	gl.supports_discard_framebuffer: false
+	gl.supports_vertex_array_object: true
+</dict>
+Cocos2d: lua_loadChunksFromZIP() - load zip file: /Users/heyao/Desktop/WorkSpace/quick-cocos2d-x-2.2.1-rc/lib/framework_precompiled/framework_precompiled.zip
+Cocos2d: lua_loadChunksFromZIP() - loaded chunks count: 54
+Cocos2d: ------------------------------------------------
+Cocos2d: LOAD LUA FILE: /Users/heyao/Desktop/WorkSpace/git/erlingsiba/scripts/main.lua
+Cocos2d: ------------------------------------------------
+Cocos2d: [0.0135] [INFO] 
+Cocos2d: [0.0135] [INFO] # DEBUG                        = 2
+Cocos2d: [0.0135] [INFO] #
+Cocos2d: [0.0136] [INFO] # device.platform              = mac
+Cocos2d: [0.0136] [INFO] # device.model                 = unknown
+Cocos2d: [0.0136] [INFO] # device.language              = cn
+Cocos2d: [0.0136] [INFO] # device.writablePath          = /Users/heyao/Desktop/WorkSpace/git/erlingsiba/
+Cocos2d: [0.0136] [INFO] # device.cachePath             = /Users/heyao/Desktop/WorkSpace/git/erlingsiba/
+Cocos2d: [0.0136] [INFO] # device.directorySeparator    = /
+Cocos2d: [0.0136] [INFO] # device.pathSeparator         = :
+Cocos2d: [0.0137] [INFO] #
+Cocos2d: [0.0147] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_WIDTH
+Cocos2d: [0.0147] [INFO] # CONFIG_SCREEN_WIDTH          = 640.00
+Cocos2d: [0.0147] [INFO] # CONFIG_SCREEN_HEIGHT         = 960.00
+Cocos2d: [0.0147] [INFO] # display.widthInPixels        = 640.00
+Cocos2d: [0.0147] [INFO] # display.heightInPixels       = 960.00
+Cocos2d: [0.0147] [INFO] # display.contentScaleFactor   = 1.00
+Cocos2d: [0.0147] [INFO] # display.width                = 640.00
+Cocos2d: [0.0147] [INFO] # display.height               = 960.00
+Cocos2d: [0.0147] [INFO] # display.cx                   = 320.00
+Cocos2d: [0.0147] [INFO] # display.cy                   = 480.00
+Cocos2d: [0.0147] [INFO] # display.left                 = 0.00
+Cocos2d: [0.0147] [INFO] # display.right                = 640.00
+Cocos2d: [0.0147] [INFO] # display.top                  = 960.00
+Cocos2d: [0.0147] [INFO] # display.bottom               = 0.00
+Cocos2d: [0.0147] [INFO] # display.c_left               = -320.00
+Cocos2d: [0.0147] [INFO] # display.c_right              = 320.00
+Cocos2d: [0.0148] [INFO] # display.c_top                = 480.00
+Cocos2d: [0.0148] [INFO] # display.c_bottom             = -480.00
+Cocos2d: [0.0148] [INFO] #
+Cocos2d: [0.1376] [INFO] Scene "MainScene:onEnter()"
+Cocos2d: [1.9065] 7->6left
+Cocos2d: [1.9065] 6->5left
+Cocos2d: [1.9066] 12->11left
+Cocos2d: [1.9066] 11->10left
+Cocos2d: [1.9066] 10->9left
+Cocos2d: [3.6964] 5->1up
+Cocos2d: [3.6965] 9->5up
+Cocos2d: [3.6965] 合体:5->1
+Cocos2d: [3.6976] 12->8up
+Cocos2d: [3.6976] 8->4up
+Cocos2d: [5.0799] 14->15right
+Cocos2d: [5.0799] 15->16right
+Cocos2d: [5.0800] 1->2right
+Cocos2d: [5.0800] 2->3right
+Cocos2d: [5.6405] 16->12up
+Cocos2d: [5.6406] 12->8up
+Cocos2d: [5.6406] 合体:8->4
+Cocos2d: [6.2868] 10->9left
+Cocos2d: [6.2868] 3->2left
+Cocos2d: [6.2869] 2->1left
+Cocos2d: [6.2869] 7->6left
+Cocos2d: [6.2869] 6->5left
+Cocos2d: [6.2869] 4->3left
+Cocos2d: [6.2870] 3->2left
+Cocos2d: [6.2870] 合体:2->1
+Cocos2d: [6.9869] 6->2up
+Cocos2d: [6.9869] 合体:9->5
+Cocos2d: [7.6938] 合体:6->2
+Cocos2d: [8.5916] 15->14left
+Cocos2d: [8.5916] 14->13left
+Cocos2d: [9.1723] 13->9up
+Cocos2d: [9.1723] 16->12up
+Cocos2d: [9.1723] 12->8up
+Cocos2d: [9.1723] 8->4up
+Cocos2d: [10.1474] [INFO] LUA VM MEMORY USED: 1328.91 KB
+Cocos2d: [10.7560] 14->13left
+Cocos2d: [10.7561] 4->3left
+Cocos2d: [11.3390] 合体:13->9
+Cocos2d: [11.3402] 14->10up
+Cocos2d: [11.3402] 10->6up
+Cocos2d: [11.7755] 合体:9->5
+Cocos2d: [12.4732] 合体:5->1
+Cocos2d: [20.1482] [INFO] LUA VM MEMORY USED: 1340.42 KB
+Cocos2d: [30.1486] [INFO] LUA VM MEMORY USED: 1340.51 KB
+Cocos2d: [40.1489] [INFO] LUA VM MEMORY USED: 1340.61 KB
+Cocos2d: [50.1493] [INFO] LUA VM MEMORY USED: 1340.71 KB
+Cocos2d: [60.1496] [INFO] LUA VM MEMORY USED: 1340.81 KB
+Cocos2d: [70.1499] [INFO] LUA VM MEMORY USED: 1340.91 KB
+Cocos2d: [80.1501] [INFO] LUA VM MEMORY USED: 1341.01 KB
+Cocos2d: [90.1673] [INFO] LUA VM MEMORY USED: 1341.11 KB
+Cocos2d: [100.1674] [INFO] LUA VM MEMORY USED: 1341.21 KB
+Cocos2d: [110.1677] [INFO] LUA VM MEMORY USED: 1341.30 KB
+Cocos2d: [120.1682] [INFO] LUA VM MEMORY USED: 1341.40 KB
+Cocos2d: [130.1853] [INFO] LUA VM MEMORY USED: 1341.50 KB
+Cocos2d: [140.1855] [INFO] LUA VM MEMORY USED: 1341.60 KB
+Cocos2d: [150.1859] [INFO] LUA VM MEMORY USED: 1341.70 KB
+Cocos2d: [160.1859] [INFO] LUA VM MEMORY USED: 1341.80 KB
+Cocos2d: [170.1865] [INFO] LUA VM MEMORY USED: 1341.90 KB
+Cocos2d: [180.1868] [INFO] LUA VM MEMORY USED: 1341.99 KB
+Cocos2d: [190.1872] [INFO] LUA VM MEMORY USED: 1342.09 KB
+Cocos2d: [200.1875] [INFO] LUA VM MEMORY USED: 1342.19 KB
+Cocos2d: [210.1878] [INFO] LUA VM MEMORY USED: 1342.29 KB
+Cocos2d: [220.1881] [INFO] LUA VM MEMORY USED: 1342.39 KB
+Cocos2d: [230.1888] [INFO] LUA VM MEMORY USED: 1342.49 KB
+Cocos2d: [240.2043] [INFO] LUA VM MEMORY USED: 1342.59 KB
+Cocos2d: [250.2056] [INFO] LUA VM MEMORY USED: 1342.68 KB
+Cocos2d: [260.2061] [INFO] LUA VM MEMORY USED: 1342.78 KB
