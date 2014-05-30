@@ -63,7 +63,7 @@ function MainScene:onUp()
 end
 
 function MainScene:onDown()
-    for i = 3 , 1 do
+    for i = 3 , 1 , -1 do
         for j = 1 , 4 do
             local index = (i - 1) * 4 + j
             moveTile(index , "down")
@@ -186,17 +186,53 @@ function onTimeOut()
     timeout = true
 end
 
+--自动检测是否gameover
+function cheackValid()
+    for i = 1 , 16 do
+        local tile = t[i]
+        if tile == nil then
+            return true
+        end
+        local nextTile
+        local upIndex = i - 4
+        local downIndex = i + 4
+        local leftIndex = i - 1
+        local rightIndex = i + 1
+        if upIndex > 0 and upIndex < 17 then
+            nextTile = t[upIndex]
+            if nextTile ~= nil and tile.data == nextTile.data then
+                return true
+            end
+        end
+        if downIndex > 0 and upIndex < 17 then
+            nextTile = t[downIndex]
+            if nextTile ~= nil and tile.data == nextTile.data then
+                return true
+            end
+        end
+        if leftIndex > 0 and leftIndex < 17 then
+            nextTile = t[leftIndex]
+            if nextTile ~= nil and tile.data == nextTile.data then
+                return true
+            end
+        end
+        if rightIndex > 0 and rightIndex < 17 then
+            nextTile = t[rightIndex]
+            if nextTile ~= nil and tile.data == nextTile.data then
+                return true
+            end
+        end
+    end
+    return false
+end
+
+--随即生成方块 
 function MainScene:generator(data)
     local nilPosition = {}
     for i = 1 , 16 do
         if t[i] == nil then
             table.insert(nilPosition , i)
         end
-    end
-    if #nilPosition == 0 then
-        print("game over")
-        start()
-        return
     end
     local pos = math.ceil(math.random(0 , #nilPosition))
     if pos == 0 then
@@ -215,6 +251,10 @@ function MainScene:generator(data)
     rect:setPosition(getTilePosByIndex(index))
     t[index] = rect
     gameLayer:addChild(rect)
+    if not cheackValid() then
+        print(gameOver)
+        self:start()
+    end
 end
 
 function MainScene:createBg()
